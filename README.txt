@@ -1,3 +1,9 @@
+## Sobre este projeto
+
+Este projeto foi desenvolvido por Otávio Mendes, utilizando como base o template
+"Photon" de HTML5 UP. O layout e os arquivos foram modificados e adaptados ao longo
+do tempo para atender às necessidades do projeto atual.
+
 Photon by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
