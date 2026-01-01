@@ -1,4 +1,4 @@
-## Sobre este projeto
+Sobre este projeto
 
 Este projeto foi desenvolvido por Otávio Mendes, utilizando como base o template
 "Photon" de HTML5 UP. O layout e os arquivos foram modificados e adaptados ao longo
