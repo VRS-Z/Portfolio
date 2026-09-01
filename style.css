@@ -46,7 +46,7 @@ img{max-width:100%;}
 
 @media (max-width: 860px){
   .featured-grid{grid-template-columns:1fr !important;}
-  .featured-grid img{height:260px;}
+  .featured-grid img{height:220px !important;}
   .projects-grid{grid-template-columns:repeat(2,1fr) !important;}
   .skills-grid{grid-template-columns:repeat(2,1fr) !important;}
   .statusbar .wrap{flex-direction:column;gap:4px;align-items:flex-start;}
