@@ -1,0 +1,61 @@
+:root{
+  --bg:#050000; --panel:#0d0303; --panel2:#170505; --border:#3d0e0e;
+  --text:#f5eded; --muted:#8f6666; --red:#ff2222; --reddim:#9c2323; --redglow:rgba(255,34,34,0.45);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Mono',monospace;}
+a{color:var(--red);text-decoration:none;}
+a:hover{color:#ff5c5c;}
+img{max-width:100%;}
+.mono{font-family:'JetBrains Mono',monospace;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px;}
+.scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(to bottom, rgba(255,34,34,0.035) 0px, rgba(255,34,34,0.035) 1px, transparent 1px, transparent 3px);}
+.vignette{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 160px rgba(0,0,0,0.85);}
+.cursor{display:inline-block;width:9px;height:1.05em;background:var(--red);vertical-align:text-bottom;margin-left:4px;animation:blink 1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block;box-shadow:0 0 8px var(--redglow);animation:pulse 1.6s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+@keyframes fadein{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+.glitch{position:relative;color:var(--text);}
+.glitch::before{content:attr(data-txt);position:absolute;left:0;top:0;width:100%;color:var(--red);opacity:.55;clip-path:inset(0 0 55% 0);transform:translate(-2px,-1px);}
+.glitch::after{content:attr(data-txt);position:absolute;left:0;top:0;width:100%;color:#fff;opacity:.35;clip-path:inset(45% 0 0 0);transform:translate(2px,1px);}
+.statusbar{background:#000;border-bottom:1px solid var(--border);font-size:11px;letter-spacing:.06em;color:var(--reddim);padding:7px 0;}
+.tag{display:inline-flex;align-items:center;gap:7px;font-size:12px;letter-spacing:.03em;padding:6px 11px;border:1px solid var(--border);color:var(--muted);background:var(--panel);min-width:0;}
+.tag span{min-width:0;overflow-wrap:anywhere;}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border:1.5px solid var(--red);color:var(--red);font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;background:rgba(255,34,34,0.07);letter-spacing:.02em;cursor:pointer;}
+.btn:hover{background:rgba(255,34,34,0.16);color:#ff5c5c;}
+.btn.solid{background:var(--red);color:#0a0000;border-color:var(--red);box-shadow:0 0 30px -6px var(--redglow);}
+.btn.solid:hover{background:#ff4747;color:#0a0000;}
+.term{position:relative;background:var(--panel);border:1px solid var(--border);overflow:hidden;box-shadow:0 40px 100px -40px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,34,34,0.06);}
+.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--panel2);border-bottom:1px solid var(--border);}
+.wdot{width:11px;height:11px;border-radius:50%;background:#2a0a0a;border:1px solid var(--border);}
+.term-title{margin-left:8px;font-size:12px;color:var(--muted);}
+.prompt{color:var(--red);}
+.card{background:var(--panel);border:1px solid var(--border);}
+
+/* Scroll-reveal sections: hidden until in view, then fade/rise up */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* Hero CTA button: hidden until the boot sequence finishes typing */
+#hero-cta{opacity:0;visibility:hidden;}
+#hero-cta.visible{opacity:1;visibility:visible;animation:fadein .5s ease;}
+
+.skip-link{position:absolute;left:-999px;top:0;background:var(--red);color:#0a0000;padding:10px 16px;font-family:'JetBrains Mono',monospace;font-weight:700;z-index:200;}
+.skip-link:focus{left:12px;top:12px;}
+
+@media (max-width: 860px){
+  .featured-grid{grid-template-columns:1fr !important;}
+  .featured-grid img{height:260px;}
+  .projects-grid{grid-template-columns:repeat(2,1fr) !important;}
+  .skills-grid{grid-template-columns:repeat(2,1fr) !important;}
+  .statusbar .wrap{flex-direction:column;gap:4px;align-items:flex-start;}
+  .nav-links{gap:16px !important;font-size:12px !important;}
+}
+
+@media (max-width: 560px){
+  .projects-grid{grid-template-columns:1fr !important;}
+  .skills-grid{grid-template-columns:1fr !important;}
+  .nav-links{gap:12px !important;}
+  .hero-body{padding:24px 24px 36px !important;}
+}

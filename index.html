@@ -1,311 +1,251 @@
-<!DOCTYPE html>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <title>Meu Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otávio Mendes — Desenvolvedor FullStack</title>
+    <meta
+      name="description"
+      content="Portfólio de Otávio Mendes, desenvolvedor FullStack. Sites e sistemas web modernos e sob medida, do institucional ao mais avançado."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Otávio Mendes — Desenvolvedor FullStack" />
+    <meta
+      property="og:description"
+      content="Sites e sistemas web modernos e sob medida, do institucional ao mais avançado."
+    />
+    <meta name="theme-color" content="#ff2222" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="is-preload">
-    <!-- Header -->
-    <section id="header">
-      <div class="inner">
-        <span class="icon solid major fa-cloud"></span>
-        <h1>
-          Olá! eu me chamo <strong>Otávio</strong>, e sou um<br />
-          Desenvolvedor FullStack.
-        </h1>
-        <p>
-          Por favor, dê um olhada aqui em baixo e<br />
-          veja tudo o que eu posso fazer por você.
-        </p>
-        <ul class="actions special">
-          <li><a href="#one" class="button scrolly">Descubra</a></li>
-        </ul>
-      </div>
-    </section>
+  <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
 
-    <!-- One -->
-    <section id="one" class="main style1">
-      <div class="container">
-        <div class="row gtr-150">
-          <div class="col-6 col-12-medium">
-            <header class="major">
-              <h2>Quer aumentar sua presença online?</h2>
-            </header>
-            <p>
-              Eu construo sites modernos e personalizados que deixam sua empresa
-              mais profissional e preparada para o mercado digital.
-            </p>
-          </div>
-          <div class="col-6 col-12-medium imp-medium">
-            <span class="image fit"
-              ><img src="images/Imagem ref para ilustrar.png" alt="Ilustração"
-            /></span>
-          </div>
+    <div style="position:relative;">
+      <div class="vignette"></div>
+
+      <div class="statusbar">
+        <div class="wrap mono" style="display:flex;justify-content:space-between;">
+          <span><span class="dot" style="width:6px;height:6px;"></span>&nbsp; SISTEMA ONLINE // ROOT ACCESS: GRANTED</span>
+          <span>BUILD: PORTFOLIO_v2.sh</span>
         </div>
       </div>
-    </section>
 
-    <!-- Two -->
-    <section id="two" class="main style2">
-      <div class="container">
-        <div class="row gtr-150">
-          <div class="col-6 col-12-medium">
-            <ul class="major-icons">
-              <li><span class="icon solid style1 major fa-code"></span></li>
-              <li><span class="icon solid style2 major fa-bolt"></span></li>
-              <li>
-                <span class="icon solid style3 major fa-camera-retro"></span>
-              </li>
-              <li><span class="icon solid style4 major fa-cog"></span></li>
-              <li><span class="icon solid style5 major fa-desktop"></span></li>
-              <li><span class="icon solid style6 major fa-calendar"></span></li>
-            </ul>
+      <!-- Nav -->
+      <header style="border-bottom:1px solid var(--border);position:relative;z-index:2;">
+        <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:72px;">
+          <a href="#main-content" class="mono" style="font-weight:700;font-size:16px;color:var(--red);text-decoration:none;">~/otavio<span class="cursor"></span></a>
+          <nav class="nav-links" style="display:flex;gap:28px;font-size:13px;color:var(--muted);">
+            <a href="#sobre" style="color:var(--muted);">./sobre</a>
+            <a href="#projetos" style="color:var(--muted);">./projetos</a>
+            <a href="#contato" style="color:var(--muted);">./contato</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <!-- Hero: terminal window -->
+        <section class="wrap" style="padding:64px 32px 60px;" aria-label="Apresentação">
+          <div class="term">
+            <div class="scan"></div>
+            <div class="term-bar">
+              <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+              <span class="term-title">root@otavio-mendes: ~</span>
+              <span style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:10px;color:var(--red);letter-spacing:.08em;"><span class="dot" style="width:6px;height:6px;"></span>LIVE</span>
+            </div>
+            <div class="mono hero-body" style="padding:36px 48px 50px;font-size:15px;line-height:1.95;min-height:400px;">
+              <div><span class="prompt">$</span>&nbsp;<span id="t-ssh"></span></div>
+              <div style="color:var(--reddim);"><span id="t-conn"></span></div>
+              <div style="color:var(--reddim);"><span id="t-ok1"></span></div>
+              <div style="color:var(--reddim);margin-bottom:22px;"><span id="t-ok2"></span></div>
+
+              <div><span class="prompt">$</span>&nbsp;<span id="t-whoami-cmd"></span></div>
+              <div class="glitch" id="t-whoami-out" data-txt="" style="color:var(--text);font-weight:700;font-size:19px;margin:6px 0 22px;">&gt; <span id="t-whoami-out-text"></span></div>
+
+              <div><span class="prompt">$</span>&nbsp;<span id="t-cat-cmd"></span></div>
+              <div style="color:var(--text);opacity:.85;font-size:15px;max-width:640px;margin:6px 0 30px;">&gt; <span id="t-cat-out"></span></div>
+
+              <div style="display:flex;align-items:center;gap:2px;margin-bottom:28px;">
+                <span class="prompt">$</span>&nbsp;<span class="cursor"></span>
+              </div>
+
+              <a href="https://wa.me/5588996293537" target="_blank" rel="noopener" id="hero-cta" class="btn solid">$ ./executar.sh<span style="opacity:.8">&nbsp;&#9654;</span></a>
+            </div>
           </div>
-          <div class="col-6 col-12-medium">
-            <header class="major">
-              <h2>Confira como posso transformar sua presença online:</h2>
-            </header>
-            <p>
-              Desenvolvo sites e sistemas web modernos, rápidos e sob medida,
-              focados em resultados reais. Do institucional ao mais avançado,
-              crio soluções que deixam sua marca mais profissional e preparada
-              para o digital.
-            </p>
+        </section>
+
+        <!-- Value prop -->
+        <section id="sobre" class="wrap reveal" style="padding:8px 32px 50px;">
+          <div class="mono" style="color:var(--reddim);font-size:12px;letter-spacing:.1em;margin-bottom:14px;min-height:16px;" data-type-line="## ---------------------------------- SOBRE ----------------------------------"></div>
+          <div style="max-width:720px;">
+            <h2 class="mono" style="font-size:24px;margin:0 0 14px;color:var(--text);">Quer aumentar sua presença online?</h2>
+            <p style="color:var(--muted);font-size:15px;line-height:1.7;margin:0;">Eu construo sites modernos e personalizados que deixam sua empresa mais profissional e preparada para o mercado digital.</p>
+          </div>
+        </section>
+
+        <!-- Skills as flags -->
+        <section class="wrap reveal" style="padding:0 32px 60px;" aria-label="Habilidades">
+          <div class="mono" style="color:var(--muted);font-size:14px;margin-bottom:16px;min-height:18px;"><span class="prompt">$</span> <span data-type-line="ls --habilidades -la"></span></div>
+          <div class="skills-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px;">
+            <div class="tag" style="justify-content:flex-start;padding:11px 13px;gap:9px;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"></polyline><polyline points="16 6 22 12 16 18"></polyline></svg>
+              <span style="color:var(--text);">--codigo</span>
+            </div>
+            <div class="tag" style="justify-content:flex-start;padding:11px 13px;gap:9px;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 4 14 11 14 10 22 20 10 13 10 12 2"></polygon></svg>
+              <span style="color:var(--text);">--performance</span>
+            </div>
+            <div class="tag" style="justify-content:flex-start;padding:11px 13px;gap:9px;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"></path><circle cx="12" cy="14" r="3.5"></circle></svg>
+              <span style="color:var(--text);">--design_visual</span>
+            </div>
+            <div class="tag" style="justify-content:flex-start;padding:11px 13px;gap:9px;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span style="color:var(--text);">--sistemas</span>
+            </div>
+            <div class="tag" style="justify-content:flex-start;padding:11px 13px;gap:9px;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="1.5"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              <span style="color:var(--text);">--web</span>
+            </div>
+            <div class="tag" style="justify-content:flex-start;padding:11px 13px;gap:9px;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1.5"></rect><line x1="3" y1="10" x2="21" y2="10"></line><line x1="8" y1="3" x2="8" y2="7"></line><line x1="16" y1="3" x2="16" y2="7"></line></svg>
+              <span style="color:var(--text);">--agendamento</span>
+            </div>
+          </div>
+          <p style="color:var(--muted);font-size:15px;line-height:1.7;max-width:680px;margin:0;">Desenvolvo sites e sistemas web modernos, rápidos e sob medida, focados em resultados reais. Do institucional ao mais avançado, crio soluções que deixam sua marca mais profissional e preparada para o digital.</p>
+        </section>
+
+        <!-- Featured -->
+        <section class="wrap reveal" style="padding:0 32px 68px;" aria-label="Projeto em destaque">
+          <div class="mono" style="color:var(--reddim);font-size:12px;letter-spacing:.1em;margin-bottom:18px;min-height:16px;" data-type-line="## ------------------------------ PROJETO PRINCIPAL ------------------------------"></div>
+          <div class="card" style="overflow:hidden;border-color:var(--red);box-shadow:0 0 50px -20px var(--redglow);">
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 20px;background:var(--panel2);border-bottom:1px solid var(--border);">
+              <span class="dot"></span>
+              <span class="mono" style="font-size:12px;color:var(--red);letter-spacing:.06em;">PROCESSO: fiore_di_campo.exe — STATUS: EM PRODUÇÃO</span>
+            </div>
+            <div class="featured-grid" style="display:grid;grid-template-columns:1.1fr 1fr;">
+              <div style="padding:44px;">
+                <h3 class="mono" style="font-size:26px;margin:0 0 16px;color:var(--text);">Fiore di Campo</h3>
+                <p style="color:var(--muted);font-size:15px;line-height:1.75;margin:0 0 22px;">E-commerce completo de mel para uma fazenda de Boa Viagem, CE: frontend em React + TypeScript, backend em Laravel com API REST, banco de dados, pagamentos, painel administrativo e operacional próprios. O projeto mais completo e moderno que já desenvolvi, em produção e uso real.</p>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px;">
+                  <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Laravel</span><span class="tag">API REST</span>
+                </div>
+                <a href="https://www.fioredicampo.com.br" target="_blank" rel="noopener" class="btn solid">acessar &gt;&gt;</a>
+              </div>
+              <div style="border-left:1px solid var(--border);position:relative;">
+                <img src="images/Fiore-di-Campo.png" alt="Fiore di Campo" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:saturate(0.75) contrast(1.1);">
+                <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,0,0,0) 60%,rgba(5,0,0,0.55));"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Grid -->
+        <section id="projetos" class="wrap reveal" style="padding:0 32px 68px;" aria-label="Outros projetos">
+          <div class="mono" style="color:var(--reddim);font-size:12px;letter-spacing:.1em;margin-bottom:18px;min-height:16px;" data-type-line="## ------------------------------ OUTROS_PROJETOS ------------------------------"></div>
+          <div class="mono" style="color:var(--muted);font-size:14px;margin-bottom:18px;min-height:18px;"><span class="prompt">$</span> <span data-type-line="ls ./outros_projetos"></span></div>
+          <div class="projects-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+            <div class="card" style="overflow:hidden;display:flex;flex-direction:column;">
+              <div style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:var(--panel2);border-bottom:1px solid var(--border);">
+                <span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span>
+              </div>
+              <img src="images/Software-Médico.png" alt="Software de Gestão Médico" style="width:100%;height:140px;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--border);filter:saturate(0.7) contrast(1.05);">
+              <div style="padding:18px;display:flex;flex-direction:column;flex:1;">
+                <div style="color:var(--muted);font-size:11.5px;margin-bottom:8px;"><span class="prompt">$</span> open software_de_gestao_medico</div>
+                <h4 class="mono" style="font-size:15px;margin:0 0 10px;color:var(--text);">Software de Gestão Médico</h4>
+                <p style="color:var(--muted);font-size:12.5px;line-height:1.6;margin:0 0 14px;flex:1;">Software de gestão médica desenvolvido para organizar atendimentos, pacientes e processos internos de forma rápida, segura e eficiente.</p>
+                <a href="https://vrs-z.github.io/Teste_XAAP/" target="_blank" rel="noopener" style="font-size:12.5px;font-weight:700;">&gt; ver_mais()</a>
+              </div>
+            </div>
+            <div class="card" style="overflow:hidden;display:flex;flex-direction:column;">
+              <div style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:var(--panel2);border-bottom:1px solid var(--border);">
+                <span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span>
+              </div>
+              <img src="images/Ativa-Recargas.png" alt="Ativarecargas" style="width:100%;height:140px;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--border);filter:saturate(0.7) contrast(1.05);">
+              <div style="padding:18px;display:flex;flex-direction:column;flex:1;">
+                <div style="color:var(--muted);font-size:11.5px;margin-bottom:8px;"><span class="prompt">$</span> open ativarecargas</div>
+                <h4 class="mono" style="font-size:15px;margin:0 0 10px;color:var(--text);">Ativarecargas</h4>
+                <p style="color:var(--muted);font-size:12.5px;line-height:1.6;margin:0 0 14px;flex:1;">Site de vendas de Gift Cards com design simples, rápido e intuitivo, oferecendo uma experiência prática para o usuário.</p>
+                <a href="https://shiny-naiad-d2a603.netlify.app/#" target="_blank" rel="noopener" style="font-size:12.5px;font-weight:700;">&gt; ver_mais()</a>
+              </div>
+            </div>
+            <div class="card" style="overflow:hidden;display:flex;flex-direction:column;">
+              <div style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:var(--panel2);border-bottom:1px solid var(--border);">
+                <span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span>
+              </div>
+              <img src="images/IECEFET.png" alt="IECEFET" style="width:100%;height:140px;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--border);filter:saturate(0.7) contrast(1.05);">
+              <div style="padding:18px;display:flex;flex-direction:column;flex:1;">
+                <div style="color:var(--muted);font-size:11.5px;margin-bottom:8px;"><span class="prompt">$</span> open iecefet</div>
+                <h4 class="mono" style="font-size:15px;margin:0 0 10px;color:var(--text);">IECEFET</h4>
+                <p style="color:var(--muted);font-size:12.5px;line-height:1.6;margin:0 0 14px;flex:1;">Site institucional moderno e organizado, criado para facilitar o acesso às informações e reforçar a presença digital da instituição.</p>
+                <a href="https://vrs-z.github.io/IECEFET_SITE_01/" target="_blank" rel="noopener" style="font-size:12.5px;font-weight:700;">&gt; ver_mais()</a>
+              </div>
+            </div>
+            <div class="card" style="overflow:hidden;display:flex;flex-direction:column;">
+              <div style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:var(--panel2);border-bottom:1px solid var(--border);">
+                <span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span>
+              </div>
+              <img src="images/R9-Informatica.png" alt="R9 Informática" style="width:100%;height:140px;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--border);filter:saturate(0.7) contrast(1.05);">
+              <div style="padding:18px;display:flex;flex-direction:column;flex:1;">
+                <div style="color:var(--muted);font-size:11.5px;margin-bottom:8px;"><span class="prompt">$</span> open r9_informatica</div>
+                <h4 class="mono" style="font-size:15px;margin:0 0 10px;color:var(--text);">R9 Informática</h4>
+                <p style="color:var(--muted);font-size:12.5px;line-height:1.6;margin:0 0 14px;flex:1;">Site institucional para uma assistência técnica especializada, com foco em conversão direta pelo WhatsApp.</p>
+                <a href="https://r9-informatica.netlify.app" target="_blank" rel="noopener" style="font-size:12.5px;font-weight:700;">&gt; ver_mais()</a>
+              </div>
+            </div>
+            <div class="card" style="overflow:hidden;display:flex;flex-direction:column;">
+              <div style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:var(--panel2);border-bottom:1px solid var(--border);">
+                <span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span><span class="wdot" style="width:7px;height:7px;"></span>
+              </div>
+              <img src="images/Ayesha-Hair-Salon.png" alt="Ayesha Hair Salon" style="width:100%;height:140px;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--border);filter:saturate(0.7) contrast(1.05);">
+              <div style="padding:18px;display:flex;flex-direction:column;flex:1;">
+                <div style="color:var(--muted);font-size:11.5px;margin-bottom:8px;"><span class="prompt">$</span> open ayesha_hair_salon</div>
+                <h4 class="mono" style="font-size:15px;margin:0 0 10px;color:var(--text);">Ayesha Hair Salon</h4>
+                <p style="color:var(--muted);font-size:12.5px;line-height:1.6;margin:0 0 14px;flex:1;">Landing page para um salão de beleza, com identidade visual elegante e apresentação da equipe de estilistas.</p>
+                <a href="https://vrs-z.github.io/Hair_Salon/" target="_blank" rel="noopener" style="font-size:12.5px;font-weight:700;">&gt; ver_mais()</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="contato" class="wrap reveal" style="padding:0 32px 80px;" aria-label="Contato">
+          <div class="term" style="border-color:var(--red);">
+            <div class="term-bar">
+              <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+              <span class="term-title">contato.sh</span>
+              <span style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:10px;color:var(--red);letter-spacing:.08em;"><span class="dot" style="width:6px;height:6px;"></span>CONEXÃO ABERTA</span>
+            </div>
+            <div style="padding:48px;text-align:center;">
+              <h2 class="mono" style="font-size:28px;margin:0 0 12px;">Tá esperando o que?</h2>
+              <p style="color:var(--muted);font-size:15px;margin:0 0 28px;">Entre em contato comigo e vamos trabalhar juntos.</p>
+              <a href="https://wa.me/5588996293537" target="_blank" rel="noopener" class="btn solid" style="padding:16px 32px;">$ conectar --whatsapp</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer style="border-top:1px solid var(--border);">
+        <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;padding:26px 32px;flex-wrap:wrap;gap:12px;">
+          <span style="color:var(--muted);font-size:13px;">root@otavio-mendes:~$ <span class="cursor"></span></span>
+          <div style="display:flex;gap:18px;">
+            <a href="https://www.instagram.com/vrs_software/" target="_blank" rel="noopener" aria-label="Instagram" style="color:var(--muted);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+            <a href="https://github.com/VRS-Z" target="_blank" rel="noopener" aria-label="GitHub" style="color:var(--muted);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.66.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"></path></svg></a>
+            <a href="mailto:vrssoftware71@gmail.com" aria-label="Email" style="color:var(--muted);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="1.5"></rect><path d="M3.5 6.5l8.5 6.5 8.5-6.5"></path></svg></a>
           </div>
         </div>
-      </div>
-    </section>
+      </footer>
 
-    <!-- Featured -->
-    <section id="featured" class="main style2 special">
-      <div class="container">
-        <header class="major">
-          <h2>Projeto em destaque</h2>
-        </header>
-        <div class="row gtr-150">
-          <div class="col-12">
-            <span class="image fit"
-              ><img src="images/Fiore-di-Campo.png" alt="Fiore di Campo"
-            /></span>
-            <h3>Fiore di Campo</h3>
-            <p>
-              E-commerce completo de mel para uma fazenda de Boa Viagem, CE:
-              frontend em React + TypeScript, backend em Laravel com API
-              REST, banco de dados, pagamentos, painel administrativo e
-              operacional próprios. O projeto mais completo e moderno que já
-              desenvolvi, em produção e uso real.
-            </p>
-            <p></p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://www.fioredicampo.com.br"
-                  target="_blank"
-                  class="button primary"
-                  >Ver mais</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <!-- Three -->
-    <section id="three" class="main style1 special">
-      <div class="container">
-        <header class="major">
-          <h2>Veja um pouco dos meus outros trabalhos abaixo</h2>
-        </header>
-        <p>Aqui um pouco das aplicações web que eu fiz recentemente</p>
-        <div class="row gtr-150">
-          <div class="col-4 col-12-medium">
-            <span class="image fit"
-              ><img src="images/Software-Médico.png" alt="Software-Médico"
-            /></span>
-            <h3>Software de Gestão médico</h3>
-            <p>
-              Software de gestão médica desenvolvido para organizar
-              atendimentos, pacientes e processos internos de forma rápida,
-              segura e eficiente, facilitando o dia a dia da clínica.
-            </p>
-            <p></p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://vrs-z.github.io/Teste_XAAP/"
-                  target="_blank"
-                  class="button"
-                  >Ver mais</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-4 col-12-medium">
-            <span class="image fit"
-              ><img src="images/Ativa-Recargas.png" alt="Ativarecargas"
-            /></span>
-            <h3>Ativarecargas</h3>
-            <p>
-              Site de vendas de Gift Cards com design simples, rápido e
-              intuitivo, oferecendo uma experiência prática para o usuário
-              escolher e adquirir créditos de forma segura.
-            </p>
-            <p></p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://shiny-naiad-d2a603.netlify.app/#"
-                  target="_blank"
-                  class="button"
-                  >Ver mais</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-4 col-12-medium">
-            <span class="image fit"
-              ><img src="images/IECEFET.png" alt="Iecefet"
-            /></span>
-            <h3>IECEFET</h3>
-            <p>
-              Site institucional moderno e organizado para o IECEFET, criado
-              para facilitar o acesso às informações e reforçar a presença
-              digital da instituição.
-            </p>
-            <p></p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://vrs-z.github.io/IECEFET_SITE_01/"
-                  target="_blank"
-                  class="button"
-                  >Ver mais</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-4 col-12-medium">
-            <span class="image fit"
-              ><img src="images/R9-Informatica.png" alt="R9 Informática"
-            /></span>
-            <h3>R9 Informática</h3>
-            <p>
-              Site institucional para uma assistência técnica especializada
-              em computadores, notebooks e videogames, com foco em conversão
-              direta pelo WhatsApp.
-            </p>
-            <p></p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://r9-informatica.netlify.app"
-                  target="_blank"
-                  class="button"
-                  >Ver mais</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-4 col-12-medium">
-            <span class="image fit"
-              ><img src="images/Ayesha-Hair-Salon.png" alt="Ayesha Hair Salon"
-            /></span>
-            <h3>Ayesha Hair Salon</h3>
-            <p>
-              Landing page para um salão de beleza, com identidade visual
-              elegante e apresentação da equipe de estilistas.
-            </p>
-            <p></p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://vrs-z.github.io/Hair_Salon/"
-                  target="_blank"
-                  class="button"
-                  >Ver mais</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Four -->
-    <section id="four" class="main style2 special">
-      <div class="container">
-        <header class="major">
-          <h2>Tá esperando o que?</h2>
-        </header>
-        <p>Entre em contato comigo e vamos trabalhar juntos.</p>
-        <ul class="actions special">
-          <li>
-            <a
-              href="https://wa.me/5588996293537"
-              target="_blank"
-              class="button wide primary"
-              >Whatsapp</a
-            >
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <section id="footer">
-      <ul class="icons">
-        <li>
-          <a
-            href="https://www.instagram.com/vrs_software/"
-            target="_blank"
-            class="icon brands alt fa-instagram"
-            ><span class="label">Instagram</span></a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/VRS-Z"
-            target="_blank"
-            class="icon brands alt fa-github"
-            ><span class="label">GitHub</span></a
-          >
-        </li>
-        <li>
-          <a
-            href="mailto:vrssoftware71@gmail.com"
-            target="_blank"
-            class="icon solid alt fa-envelope"
-            ><span class="label">Email</span></a
-          >
-        </li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; Untitled</li>
-        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-      </ul>
-    </section>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
